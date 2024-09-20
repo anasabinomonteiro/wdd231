@@ -1,0 +1,5 @@
+NORMALIZE CSS:
+An alternative to hosting your own normalize or reset CSS file is to use a content delivery network (CDN) reference.
+This particular reference has minimized the "normalize.css" file as indicated by the .min in the file name:
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+CDN = content delivery network - diminui latência, página carrega mais rapidamente, distribuição em vários servidores.
