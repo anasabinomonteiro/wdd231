@@ -4,14 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Lucia da Silva Monteiro</title>
-    <meta name="description" content="Course home page. Demonstrate knowledge by apppying HTML, CSS and Javascript">
+    <meta name="description" content="">
     <meta name=" author" content="Ana Lucia da Silva Monteiro">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@500&family=Playpen+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
-    <link rel="stylesheet" href="styles/">
-    <link rel="scripts" href="scripts/">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/index.js" defer></script>
 </head>
-
 <body>
+    <header>
+        <div class="header-content">
+            <img src="images/profile.webp" alt="Picture-profile">
+            <h1>Ana Lucia da Silva Monteiro</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Github Profile</a></li>
+                <li><a href="www.linkedin.com/in/analuciamonteiro">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-work">
+            <h2>Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+
+        <section class="location">
+            <h2>São Paulo, Brazil</h2>
+            <img src="images/river-pines-saopaulo.webp" alt="Pinheiros-River">
+            <p>Pinheiros River</p>
+        </section>
+
+        <section class="certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="certificate-buttons">
+                <button id="all-courses">All</button>
+                <button id="cse-courses">CSE</button>
+                <button id="wdd-courses">WDD</button>
+            </div>
+
+            <div id="course-list" class="course-grid">
+                <!--Courses will be dynamically injected by javascript-->
+            </div>
+            
+            <!--Display dynamically total numbers of credit-->
+            <div id="total-credits">
+                Total Credits: 0
+            </div>            
+        </section>
+    </main>
     
+    <footer>
+        <p>&copy; <span id="currentYear"></span> ♦ Ana Lucia da Silva Monteiro ♦ Brazil</p>
+        <p>Last Update: <span id="lastModifiedDate"></span></p>
+    </footer>
 </body>
 </html>

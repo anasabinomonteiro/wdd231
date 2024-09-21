@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6; 
+}
+
+header {
+    background-color: #757170;
+    color: white;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.header-content img {
+    width: 100px;
+    margin-right: 2em;
+    border-radius: 10%;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+/* Responsive navigation */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1em;
+    background-color: #846c6c;
+    font-size: 1.5em;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+
+nav ul li a:hover {
+    background-color: #a6ebec; /* hover */
+    border-radius: 4px;
+}
+
+/* hamburger menu (smaller screens) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+/* Smaller screns */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* hide menu in small screen */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #003366;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1em;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .show-menu nav ul {
+        display: flex;
+    }
+}
+
+/* Large screen */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* hide hamburger menu */
+    }
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.course-work {
+    background-color: white;
+    padding: 2em;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 45%; /* Adjust side by side */
+}
+
+
+/* Courses completed clearly marked in a different way */
+.course-card {
+    padding: 1em;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+/* Conclude course */
+.completed {
+    background-color: #245c26; 
+    color: white;
+}
+
+/* In progress course */
+.in-progress {
+    background-color: #52302d; 
+    color: white;
+}
+
+.location {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    width: 35%; /* Adjust side by side */
+}
+
+.course-work h2, .location h2, .certificate h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1em;
+    background-color: #434242;
+    font-size: 2em;
+}
+
+.location img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.certificate-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.certificate-buttons button, 
+.course-grid button {
+    background-color: #846c6c; 
+    color: white;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease; /* hover animation */
+}
+
+.certificate-buttons button:hover, 
+.course-grid button:hover {
+    background-color:  #a6ebec; /*hover effect */
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Small screen */
+@media (max-width: 768px) {
+    .course-work, .location {
+        width: 100%;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+footer {
+    background-color: #757170;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: auto;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+/* Access Focus */
+button:focus, 
+a:focus {
+    outline: 2px solid #0a9396;
+}
+
+#total-credits {
+    font-size: 1.5em; 
+    font-weight: bold; 
+    color: #345760; 
+    background-color: #f0f0f0; 
+    padding: 0.5em; 
+    margin-top: 1em; 
+    border-radius: 8px; 
+    text-align: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
