@@ -85,6 +85,15 @@ nav ul li a:hover {
     border: none;
     font-size: 2em;
     cursor: pointer;
+    padding: 10px;
+}
+
+#hamburger-menu::before {
+    content: "☰"; 
+}
+
+#hamburger-menu.open::before {
+    content: "❎"; 
 }
 
 /* Responsive menu - small screens */
@@ -92,10 +101,9 @@ nav ul li a:hover {
     /* show hamburg button */
     #hamburger-menu {
         display: block;
-        padding: 10px;
     }
 
-    /* pattern - hide navigation menu */
+    /* hide navigation menu */
     nav ul {
         display: none;
         flex-direction: column;
@@ -120,7 +128,7 @@ nav ul li a:hover {
     }
 }
 
-/* Small screns - adjust */
+/* Large screens - adjust */
 @media (min-width: 769px) {
     .header-content {
         flex-direction: row;

@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const navMenu = document.querySelector('nav ul');
 
     hamburgerMenu.addEventListener('click', function () {
-        navMenu.classList.toggle('show'); //Menu appear or hide
+        navMenu.classList.toggle('show'); // hide or show menu
+        hamburgerMenu.classList.toggle('open'); // icon button
     });
 
     //Start rendering courses
