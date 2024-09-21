@@ -17,6 +17,14 @@ document.addEventListener("DOMContentLoaded", function() {
         lastModifiedDateElement.textContent = lastModifiedDate;
     }
 
+    // hamburg button
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.querySelector('nav ul');
+
+    hamburgerMenu.addEventListener('click', function () {
+        navMenu.classList.toggle('show'); //Menu appear or hide
+    });
+
     //Start rendering courses
     const courseList = document.getElementById('course-list');
     const totalCreditsElement = document.getElementById('total-credits');    
