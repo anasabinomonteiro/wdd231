@@ -18,24 +18,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Favicon -->
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- Javascript -->
     <script src="scripts/directory.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>São Paulo Chamber of Commerce</h1> 
-        <nav aria-label="Main navigation">
-          <ul>
-              <li><a href="directory.html">Home</a></li>
-              <li><a href="#">Discover</a></li>
-              <li><a href="#">Directory</a></li>
-              <li><a href="#">Join</a></li>
-          </ul>
-      </nav>          
+        <!-- Logo left-->
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/logo.png"  alt="SP Chamber Logo" class="logo">
+                <h1>São Paulo</h1> 
+                <p>Chamber of Commerce</p>
+            </div>
+         <!-- Nav right -->   
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="directory.html">Home</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                </ul>
+            </nav>
+        </div>          
       </header>
 
       <!-- Hero Section -->
     <section class="hero">
-        <img src="images/river-pines-saopaulo.webp" alt="Scalable, responsive hero image" class="hero-image">
+        <img src="images/hero.webp" alt="Scalable, responsive hero image" class="hero-image">
         <a href="#" class="hero-button">Keynote Tickets</a>
     </section>
 
@@ -49,8 +58,39 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="currentYear"></span> ♦ Ana Lucia da Silva Monteiro ♦ Brazil</p>
-        <p>Last Update: <span id="lastModifiedDate"></span></p>
+        <div class="footer-container">
+            <!-- Contact -->
+            <div class="footer-column contact-info">
+                <h3>São Paulo Chamber of Commerce</h3>
+                <p>Rebouças Avenue 2595</p>
+                <p>Pinheiros , São Paulo</p>
+                <p><a href="mailto:info@spchamber.org">info@spchamber.org</a></p>
+                <p>+55 11 5500-5500</p>
+            </div>
+    
+            <!-- Social Media Icons -->
+            <div class="footer-column social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube Icon"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter Icon"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn Icon"></a>
+            </div>
+    
+            <!-- Project Information -->
+            <div class="footer-column dev-info">
+                <p>WDD231 Class Project</p>
+                <p>Ana Lucia da Silva Monteiro</p>
+                <p>&copy; <span id="currentYear"></span> São Paulo Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastModifiedDate"></span></p>
+            </div>
+        </div>
+    
+        <!-- Icon Credits -->
+        <div class="icon-credits">
+            <p>
+                <a target="_blank" href="https://icons8.com/icon/19318/youtube">YouTube</a> ícone por <a target="_blank" href="https://icons8.com">Icons8</a> / 
+                <a target="_blank" href="https://icons8.com/icon/13930/linkedin">LinkedIn</a> ícone por <a target="_blank" href="https://icons8.com">Icons8</a>
+            </p>
+        </div>
     </footer>
 
 </body>
