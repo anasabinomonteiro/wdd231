@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 Project - Chamber of Commerce - Ana Lucia da Silva Monteiro</title>
+    <meta name="description" content="This is the project for the WDD 231 course, focused on creating a website for the chamber of commerce.">
+    <meta name=" author" content="Ana Lucia da Silva Monteiro">
+    <meta property="og:url"             content="https://anasabinomonteiro.github.io/wdd231/chamber">
+    <meta property="og:type"            content="website">
+    <meta property="og:title"           content="São Paulo Chamber of Commerce">
+    <meta property="og:description"     content="São Paulo Chamber of Commerce Home Page">
+    <meta property="og:image"           content="https://anasabinomonteiro.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:image:alt"       content="São Paulo">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>São Paulo Chamber of Commerce</h1> 
+        <nav aria-label="Main navigation">
+          <ul>
+              <li><a href="directory.html">Home</a></li>
+              <li><a href="#">Discover</a></li>
+              <li><a href="#">Directory</a></li>
+              <li><a href="#">Join</a></li>
+          </ul>
+      </nav>          
+      </header>
+
+      <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/river-pines-saopaulo.webp" alt="Scalable, responsive hero image" class="hero-image">
+        <a href="#" class="hero-button">Keynote Tickets</a>
+    </section>
+
+    <main>
+        <section class="view-toggle">
+            <button id="gridView">Grid View</button>
+            <button id="listView">List View</button>
+        </section>
+
+        <section id="memberContainer"  class="grid-view"></section>        
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> ♦ Ana Lucia da Silva Monteiro ♦ Brazil</p>
+        <p>Last Update: <span id="lastModifiedDate"></span></p>
+    </footer>
+
+</body>
+</html>

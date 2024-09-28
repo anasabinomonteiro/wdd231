@@ -1,0 +1,73 @@
+[
+    {
+      "name": "Tech Innovators",
+      "address": "123 Tech Lane, Silicon Valley, CA 94043",
+      "phone": "+1-800-555-1234",
+      "website": "https://www.techinnovators.com",
+      "icon": "tech_innovators.png",
+      "membership_level": 3,
+      "description": "A leading tech company focused on innovation and software development.",
+      "email": "info@techinnovators.com"
+    },
+    {
+      "name": "Green Energy Corp",
+      "address": "456 Green St, Denver, CO 80202",
+      "phone": "+1-800-555-5678",
+      "website": "https://www.greenenergycorp.com",
+      "icon": "green_energy.png",
+      "membership_level": 2,
+      "description": "A sustainable energy company specializing in renewable power solutions.",
+      "email": "contact@greenenergycorp.com"
+    },
+    {
+      "name": "Health First",
+      "address": "789 Wellness Ave, Austin, TX 78701",
+      "phone": "+1-800-555-9101",
+      "website": "https://www.healthfirst.com",
+      "icon": "health_first.png",
+      "membership_level": 1,
+      "description": "Healthcare services provider with a focus on telemedicine and preventative care.",
+      "email": "support@healthfirst.com"
+    },
+    {
+      "name": "Eco Supplies",
+      "address": "135 Sustainable Dr, Portland, OR 97201",
+      "phone": "+1-800-555-1122",
+      "website": "https://www.ecosupplies.com",
+      "icon": "eco_supplies.png",
+      "membership_level": 1,
+      "description": "Supplier of eco-friendly products for homes and businesses.",
+      "email": "sales@ecosupplies.com"
+    },
+    {
+      "name": "Skyline Construction",
+      "address": "246 Builder Blvd, Chicago, IL 60607",
+      "phone": "+1-800-555-3344",
+      "website": "https://www.skylineconstruction.com",
+      "icon": "skyline_construction.png",
+      "membership_level": 2,
+      "description": "Commercial construction company with projects across the country.",
+      "email": "info@skylineconstruction.com"
+    },
+    {
+      "name": "Future Finance",
+      "address": "357 Investment Ln, New York, NY 10005",
+      "phone": "+1-800-555-4455",
+      "website": "https://www.futurefinance.com",
+      "icon": "future_finance.png",
+      "membership_level": 3,
+      "description": "A fintech company offering financial planning tools and investment services.",
+      "email": "contact@futurefinance.com"
+    },
+    {
+      "name": "Global Logistics",
+      "address": "468 Cargo Rd, Miami, FL 33101",
+      "phone": "+1-800-555-5566",
+      "website": "https://www.globallogistics.com",
+      "icon": "global_logistics.png",
+      "membership_level": 2,
+      "description": "Provider of international shipping and logistics solutions.",
+      "email": "support@globallogistics.com"
+    }
+  ]
+  

@@ -39,7 +39,6 @@ nav button:hover {
 
 h2, p {
     margin: auto;   
-    text-align: center;
     }
 
 h1 {
@@ -77,7 +76,6 @@ p {
     background-color:rgb(229, 225, 233);
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(128, 24, 24, 0.1);
-    text-align: center;
 }
 
 .card img {
@@ -126,13 +124,9 @@ footer {
 
     #cards {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+        gap: 30px;
         margin: 1rem;
         justify-content: center;
-    }
-
-    .card {  
-        text-align: center;  
     }
 
     .card img {  
@@ -154,11 +148,7 @@ footer {
 
     p {
         font-size: 0.9em;
-    }
-
-    h1, h2, p {
-        text-align: center;
-    }
+    } 
 
     nav button {
         font-size: 0.9em;
@@ -166,14 +156,10 @@ footer {
     }
 
     #cards {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
         margin: 0.5rem;
       }
-
-    .card {
-        text-align: center;
-    }
 
     .card img {
         width: 70%;  
