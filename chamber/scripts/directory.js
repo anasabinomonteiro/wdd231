@@ -13,6 +13,16 @@ document.addEventListener("DOMContentLoaded", async function() {
         lastModifiedDateElement.textContent = lastModifiedDate;
     }
 
+    // hamburg button
+    const hamburgMenu = document.getElementById('hamburg-menu');
+    const navMenu = document.querySelector('nav ul');
+
+    hamburgMenu.addEventListener('click', function () {
+        navMenu.classList.toggle('show'); // hide or show menu
+        hamburgMenu.classList.toggle('open'); // icon button
+    });
+
+
     // Fetch the members data
     const memberContainer = document.getElementById("memberContainer");
     
@@ -43,11 +53,14 @@ document.addEventListener("DOMContentLoaded", async function() {
                     <p>${member.phone}</p>
                     <a href="${member.website}" target="_blank">${member.website}</a>
                     <p>Membership Level: ${member.membership_level}</p>
-                </div>
-            `;
+                </div>`;
         }
 
         // Render members - grid or list view
+        const gridButton = document.querySelector("#gridView");
+        const listButton = document.querySelector("#listView");
+        const memberContainer = document.querySelector("#memberContainer");
+
         function renderMembers(viewType) {
             memberContainer.innerHTML = '';
             if (viewType === 'grid') {
@@ -69,11 +82,11 @@ document.addEventListener("DOMContentLoaded", async function() {
         renderMembers('grid');
 
         // Toggle between grid and list views
-        document.getElementById('gridView').addEventListener('click', () => {
+        gridButton.addEventListener("click", () => {
             renderMembers('grid');
         });
-
-        document.getElementById('listView').addEventListener('click', () => {
+        
+        listButton.addEventListener("click", () => {
             renderMembers('list');
         });
 
