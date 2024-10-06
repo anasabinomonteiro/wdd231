@@ -216,6 +216,45 @@ header h1 {
     content: "❎"; 
 }
 
+table.colors {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table.colors th, table.colors td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+
+table.colors th {
+    background-color: #e0e0e0; 
+    color: #333; 
+    font-weight: bold;
+}
+
+.primary {
+    background-color: #D8D2E1;
+    color: #333;
+}
+
+.secondary {
+    background-color: #4FC9C9;
+    color: #fff;
+}
+
+.background {
+    background-color: #F5F5F5;
+    color: #333;
+}
+
+.text {
+    background-color: #1A212E;
+    color: #fff;
+}
+
 
 /* Footer general */
 footer {
@@ -278,8 +317,28 @@ footer {
     text-decoration: underline;
 }
 
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* Mobile responsive 768px*/
+
+/************************** Index CSS ***************************************/
+#spotlight-members {
+    display: flex;
+    flex-wrap: warp;
+    gap: 20px;
+}
+
+.spotlight-card {
+    border: 1px solid #1A212E;
+    padding: 15px;
+    width: 350px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.spotlight-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*--------Responsive 768px--------------------------------------------*/
 @media (max-width: 768px) {
     #hamburg-menu {
         display: block;
@@ -416,10 +475,13 @@ footer {
     .footer-column {
         margin-bottom: 20px;
     }
+
+    table.colors th, table.colors td {
+        padding: 5px;        
+}
 }
 
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* Mobile responsive 390px */
+/*--------------Mobile responsive 390px-----------------------------------------------------*/
 @media (max-width: 390px) {
     .header-container {
         flex-direction: column;
@@ -502,4 +564,9 @@ footer {
     .member-card a:hover {
         text-decoration: underline; 
     }
+
+    table.colors th, table.colors td {
+        padding: 5px;
+        
+}
 }
