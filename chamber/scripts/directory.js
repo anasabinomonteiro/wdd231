@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", async function() {
+document.addEventListener("DOMContentLoaded", async function () {
     // Type current year
     var currentYear = new Date().getFullYear();
     var currentYearElement = document.getElementById("currentYear");
@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     // Fetch the members data
     const memberContainer = document.getElementById("memberContainer");
-    
+
     try {
-        const jsonData = await fetch('data/members.json'); 
+        const jsonData = await fetch('data/members.json');
         const members = await jsonData.json();
 
         // Function to create the member card
@@ -42,25 +42,13 @@ document.addEventListener("DOMContentLoaded", async function() {
                 </div>`;
         }
 
-        // Function -create member list 
-        function createMemberListItem(member) {
-            return `
-                <div class="member-list-item">
-                    <h3>${member.name}</h3>
-                    <p>${member.address}</p>
-                    <p>${member.phone}</p>
-                    <a href="${member.website}" target="_blank">${member.website}</a>
-                    <p>Membership Level: ${member.membership_level}</p>
-                </div>`;
-            }
-           
         function renderMembers(members) {
             memberContainer.innerHTML = '';
 
             members.forEach(member => {
                 const memberDiv = document.createElement('div');
                 memberDiv.classList.add('member-item');
-                memberDiv.innerHTML = createMemberCard(member);                
+                memberDiv.innerHTML = createMemberCard(member);
                 memberContainer.appendChild(memberDiv);
             });
         }
@@ -68,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const gridButton = document.querySelector("#gridView");
         const listButton = document.querySelector("#listView");
 
-        if (gridButton){
+        if (gridButton) {
             gridButton.addEventListener('click', () => {
                 memberContainer.classList.add('grid-view');
                 memberContainer.classList.remove('list-view');
@@ -77,151 +65,128 @@ document.addEventListener("DOMContentLoaded", async function() {
             console.error('Grid view not found');
         }
 
-        if (listButton){
-            listButton.addEventListener ('click', () => {
+        if (listButton) {
+            listButton.addEventListener('click', () => {
                 memberContainer.classList.add('list-view');
                 memberContainer.classList.remove('grid-view');
             });
-        }else {
+        } else {
             console.error('List view not found');
         }
 
         //Call render
         renderMembers(members);
-    } catch(error) {
+    }
+    catch (error) {
         console.error('Error loading members', error);
     }
 
-    // Weather API Integration
-    const currentTemp = document.querySelector('#current-temp');
-    const weatherIcon = document.querySelector('#weather-icon');
-    const weatherDesc = document.querySelector('#weather-desc');
-    const humidityElement = document.querySelector('#humidity');
-        
+    // Weather API Integration       
     const apiKey = '44e7b0c6a8eb0b60055ad80c0639a425';
-    const lat = '-23.55750';
-    const lon = '-46.68462';
+    const lat = '-22';
+    const lon = '-49';
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&cnt=3&appid=${apiKey}&units=metric`;
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=3&appid=${apiKey}&units=metric`;
-    
-    async function fetchWeather() {
-        try {
-            const response = await fetch(weatherUrl);
-            if(response.ok) {
-                const data = await response.json();
-                displayWeather(data);
-            } else {
-                throw new Error(await response.text());
-            }
-        } catch (error) {
-            console.log('Error fetching weather data:', error); 
-        }        
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?id=3448433&cnt=3&lat=${lat}&lon=${lon}&cnt=3&appid=${apiKey}&units=metric`;
+
+    const weatherIcon = document.getElementById('weather-icon');
+    const weatherDesc = document.getElementById('weather-desc');
+    const currentTemp = document.getElementById('current-temp');
+    const currentTempForcast = document.getElementById('current-temp-forcast');
+    const humidityElement = document.getElementById('humidity');
+    const highElement = document.getElementById('high');
+    const lowElement = document.getElementById('low');
+    const sunriseElement = document.getElementById('sunrise');
+    const sunsetElement = document.getElementById('sunset');
+    const forecastContainer = document.getElementById('forecast');
+
+    // Capitalize
+    function capitalizeDescription(description) {
+        return description.replace(/\b\w/g, char => char.toUpperCase());
     }
 
-    function displayWeather(data) {
-        const temperature = Math.round(data.main.temp);
-        currentTemp.innerHTML = `${data.main.temp}&deg;C`;
+    // Get current weather
+    async function getWeatherData() {
+        const response = await fetch(weatherUrl);
+        const data = await response.json();
 
-
-        //Update icon and weather for all weather events
-        weatherIcon.innerHTML = '';
-        weatherDesc.innerHTML = '';
-
-        //Create and append weather icon
-        const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;                      
-        const description = data.weather[0].description;
+        // Creating and adding icon temperature
+        const iconSrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+        const description = capitalizeDescription(data.weather.map(event => event.description).join(' , '));
         const icon = document.createElement('img');
-        icon.setAttribute('src' , iconSrc);
+        icon.setAttribute('src', iconSrc);
         icon.setAttribute('alt', description);
+        weatherIcon.innerHTML = ''; // clean  previous item if exist
         weatherIcon.appendChild(icon);
-        weatherDesc.textContent = description;
-        //Show humidity
-        humidityElement.textContent = `Humidity: ${data.main.humidity}%`;
-    }
 
-    async function fetchWeatherForecast() {
+        // Update  description and temperature
+        weatherDesc.textContent = description;
+        currentTemp.textContent = Math.round(data.main.temp); // round temperature
+
+        // Humidity
+        highElement.textContent = `High: ${data.main.temp_max}`;
+        lowElement.textContent = `Low: ${data.main.temp_min}`;
+        humidityElement.textContent = `Humidity: ${data.main.humidity}`;
+        sunriseElement.textContent = `Sunrise: ${data.sys.sunrise}`;
+        sunsetElement.textContent = `Sunset: ${data.sys.sunset}`;   
+     }
+
+    // Forecast (3 days)
+    async function getWeatherForecast() {
         try {
             const response = await fetch(forecastUrl);
-            if(response.ok) {
-                const data = await response.json();
-                displayWeatherForecast(data);
-            } else {
-                throw new Error(await response.text());
+            const data = await response.json(); 
+            
+            console.log(data);
+
+        forecastContainer.innerHTML = ''; // clean  previous item if exist
+
+        if (!data.list || data.list.length === 0) {
+            console.error("No forecast available");
+            return;
+        }
+
+        // Forecast for 3 days
+        for (let i = 0; i < data.list.length && i < 3; i++) {
+            let forecastDay = data.list[i];
+
+            // Day Temp
+            if (forecastDay && forecastDay.main !== undefined) {
+            let dayTemp = Math.round(forecastDay.main.temp); 
+            let dayName = new Date(forecastDay.dt * 1000).toLocaleDateString('en-US', { weekday: 'long' });
+
+            // Create forecast item
+            const forecastItem = document.createElement('div');
+            forecastItem.classList.add('forecast-item');
+            forecastItem.innerHTML = `<strong>${dayName}:</strong> ${dayTemp}°C`;
+            forecastContainer.appendChild(forecastItem);
+            }else {
+                console.error(`Missing temperature data for day ${i + 1}`);
             }
-        }catch (error) {
-            console.log('Error fetching weather forecast', error);
         }        
-    }
+        } catch(error)  {
+        console.error('Error fetching forecast data:', error);
+       }
+      }
 
-    function displayWeatherForecast(data) {
-        const forecastContainer = document.querySelector('#forecast');
+    // Call functions
+    getWeatherData();
+    getWeatherForecast();
 
-        //Clearing previous forecasts, if applicable
-        forecastContainer.innerHTML = '';
-
-        const today = new Date();
-        const todayDate = today.setHours(0, 0, 0, 0);
-
-        const tomorrowDate = new Date(today);
-        tomorrowDate.setDate(today.getDate() + 1);
-        tomorrowDate.setHours(0, 0, 0, 0);
-
-        const dayAferTomorrowDate = new Date(today);
-        dayAferTomorrowDate.setDate(today.getDate() + 2);
-        dayAferTomorrowDate.setHours(0, 0, 0, 0);
-
-        let forecastCount = 0;
-        data.list.forEach(forecast => {
-            const forecastDate = new Date(forecast.dt * 1000).setHours(0, 0, 0, 0);
-
-            if (forecastDate.getTime() === todayDate.getTime() ||
-                forecastDate.getTime() === tomorrowDate.getTime() ||
-                forecastDate.getTime() === dayAferTomorrowDate.getTime()) {
-
-                const forecastItem = document.createElement('div');
-                forecastItem.classList.add('forecast-item');
-
-                const date = new Date(forecast.dt * 1000);
-                const options = {weekday: 'long' };
-                const dayName = new Intl.DateTimeFormat('en-US', options).format(date);
-
-                const dateText = forecastDate.getTime() === todayDate.getTime() ? 'Today': dayName;
-
-                const temp = Math.round(forecast.main.temp);
-                const tempElem = document.createElement('p');
-                tempElem.innerHTML = `${dateText}: ${temp}&deg;C`;
-
-                forecastItem.appendChild(tempElem);
-
-                forecastContainer.appendChild(forecastItem);
-
-                forecastCount++;
-                if(forecastCount >= 3) return;
-            }
-        });
-     }
-    // Call Function
-
-    //Current weather
-    fetchWeather();
-
-    //Weather forecast
-    fetchWeatherForecast();
 
     async function fetchMembers() {
         try {
             const response = await fetch('data/members.json');
-            if(response.ok) {
+            if (response.ok) {
                 const members = await response.json();
                 displaySpotlightMembers(members);
-            }else {
+            } else {
                 throw new Error('Error loading members');
             }
         } catch (error) {
             console.log('Error:', error);
-        }        
+        }
     }
-   
+
     function displaySpotlightMembers(members) {
         const spotlightContainer = document.getElementById('spotlight-members');
         //Silver or Gold
@@ -259,21 +224,21 @@ document.addEventListener("DOMContentLoaded", async function() {
             websiteElem.target = '_blank';
             memberCard.appendChild(websiteElem);
             //Level of Association
-            const membershipLevelElem = document.createElement('p')  ;
+            const membershipLevelElem = document.createElement('p');
             membershipLevelElem.textContent = `Membership Level: ${member.membership_level === 3 ? 'Gold' : 'Silver'}`;
             memberCard.appendChild(membershipLevelElem);
-           //Add card to memberContainer
-           spotlightContainer.appendChild(memberCard);
+            //Add card to memberContainer
+            spotlightContainer.appendChild(memberCard);
         });
     }
 
     function shuffleArray(array) {
-        for (let i = array.lenght - 1; i > 0; i--) {
+        for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array [j]] = [array[j], array[i]];
+            [array[i], array[j]] = [array[j], array[i]];
         }
         return array;
     }
     //Call function
     fetchMembers()
-    });
+});

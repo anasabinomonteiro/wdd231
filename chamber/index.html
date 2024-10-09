@@ -36,7 +36,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">Discover</a></li>
                     <li><a href="directory.html">Directory</a></li>
-                    <li><a href="#">Join</a></li>
+                    <li><a href="join.html">Join</a></li>
                     <li><a href="siteplan.html">Site Plan</a></li>
                 </ul>
             </nav>
@@ -46,42 +46,48 @@
       <!-- Hero Section -->
     <section class="hero">
         <img src="images/hero.webp" alt="Scalable, responsive hero image" class="hero-image">
-        <a href="#" class="hero-button">Keynote Tickets</a>
+        <a href="join.html" class="hero-button">Join São Paulo Chamber of Commerce</a>
     </section>
 
-    <main>
-        <section>
+    <main class="main-index">
+        <section class="home">
             <h2>Home</h2>
         </section>
-
         <!-- Events Section -->
-        <section class="event-weather">
-            <div class="events">
+        <section class="events">            
                 <h3>Events</h3>
                 <p>Join us on October 19 for the region's largest business fair, an event attended by members of the local government, investors and customers - don't miss it!</p>
-            </div>
-            <!-- Weather Section -->
-            <div class="weather">
-                <h3>Current Weather</h3>
-                <p><span id="current-temp"></span></p>
-                <figure>
-                    <img id="weather-icon" src="" alt="">
-                    <figcaption></figcaption>
-                  </figure>
-                  <p id="weather-desc"></p>
-                  <p><span id="humidity"></span></p>
-                  <h3>Weather Forecast</h3>
-                  <div id="forecast">
-                    <!--Forcast here-->
-                  </div>
-            </div>
         </section>
 
-        <!-- Business Section -->
-          <section class="business">
-            <div id="spotlight-members"></div>
-          </section>
+         <!-- Weather Section -->
+        <section class="weather"> 
+            <h3>Current Weather</h3>   
+            <div class="weather-info">
+                <p>Temperature: <span id="current-temp"></span>°C</p>  
+                <figure>
+                    <div id="weather-icon"></div>
+                    <figcaption><span id="weather-desc"></span></figcaption>
+                </figure>                
+                <p id="high"></p>
+                <p id="low"></p> 
+                <p id="humidity"></p> 
+                <p id="sunrise"></p>
+                <p id="sunset"></p>                 
+            </div>
+        </section> 
+            
+            <section class="forecast">
+                <h3>Forecast</h3>
+                <div id="forecast">
+                    <p>Temperature: <span id="current-temp-forcast"></span>°C</p>
+                </div>
+            </section>   
         
+
+        <!-- Business Section -->
+         <section class="business">
+            <div id="spotlight-members"></div>
+         </section>        
      </main>
 
     <footer>
