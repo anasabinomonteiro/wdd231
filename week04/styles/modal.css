@@ -1,0 +1,16 @@
+button {
+    display: block;
+    margin: auto;
+    width: 10rem;
+    height: 2rem;
+  }
+  
+  :modal {
+    background-color: pink;
+    border: 5px solid red;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0 / 50%);
+  }
+  
+  p {
+    color: black;
+  }

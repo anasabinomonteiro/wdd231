@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         navMenu.classList.toggle('show'); // hide or show menu
         hamburgerMenu.classList.toggle('open'); // icon button
     });
-
+    
     //Start rendering courses
     const courseList = document.getElementById('course-list');
     const totalCreditsElement = document.getElementById('total-credits');    
@@ -137,7 +137,9 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>${course.completed ? 'Completed' : 'In Progress'}</p>
             `;
 
-            courseList.appendChild(courseCard);
+            courseCard.addEventListener('click', () => displayCourseDetails(course));
+
+            courseList.appendChild(courseCard);            
         });
 
         // Update total credits dynamically
@@ -151,5 +153,34 @@ document.addEventListener("DOMContentLoaded", function() {
     // Filter courses based on user selection
     document.getElementById('all-courses').addEventListener('click', () => renderCourses());
     document.getElementById('cse-courses').addEventListener('click', () => renderCourses('CSE'));
-    document.getElementById('wdd-courses').addEventListener('click', () => renderCourses('WDD'));    
-});    
+    document.getElementById('wdd-courses').addEventListener('click', () => renderCourses('WDD'));
+    });
+    
+
+    //Display Courses in modal
+   function displayCourseDetails(course)  {
+    const courseDetails = document.getElementById('course-details');
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong> ${course.credits}</p>
+    <p><strong>Certificate</strong> ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong> ${course.technology.join(', ')}</p>`
+    ;
+    courseDetails.showModal();
+
+    const closeModal = document.getElementById('closeModal');
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+
+    courseDetails.addEventListener('click', (event) => {
+        if (event.target === courseDetails) {
+            courseDetails.close();
+        }
+    });
+}
+   
