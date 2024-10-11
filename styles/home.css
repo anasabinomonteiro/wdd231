@@ -115,6 +115,24 @@ nav ul li a:hover {
     content: "❎"; 
 }
 
+.certificate h2 {
+    animation-duration: 3s;
+    animation-name: locationrote;
+    animation-direction: alternate;
+}
+
+@keyframes locationrote {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
 /* Responsive menu - small screens */
 @media (max-width: 768px) {
     /* show hamburg button */
