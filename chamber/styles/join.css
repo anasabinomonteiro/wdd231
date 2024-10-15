@@ -1,0 +1,435 @@
+/* Reset Basic general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #F5F5F5;
+    color: #1A212E;
+    margin: 0;
+}
+
+header {
+    background-color:#D8D2E1;
+    padding: 20px 30px;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+}
+
+.logo {
+    width: 50px; /* Logo Size */
+    height: auto;
+    margin-right: 15px; 
+}
+
+.logo-container h1 {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 2px; /*space h1 */
+}
+
+.logo-container p {
+    font-size: 1rem;
+    margin: 0;
+    color: #524c4c;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1A212E;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #4FC9C9;
+    text-decoration: underline;
+    border-radius: 5px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover; 
+}
+
+.hero-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #555;
+}
+
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.view-toggle button {
+    background-color: #4FC9C9;
+    color: #1A212E;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-toggle button:hover {
+    background-color: #555;
+}
+
+/* Hamburg button */
+#hamburg-menu {
+    display: none; /* hide large screen */
+    background-color: #003366;
+    color: white;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+#hamburg-menu::before {
+    content: "☰"; 
+}
+
+#hamburg-menu.open::before {
+    content: "❎"; 
+}
+
+/* Footer general */
+footer {
+    background-color:#D8D2E1;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.contact-info h3 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    font-weight: bold;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+.dev-info p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Icon credits */
+.icon-credits {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+.icon-credits a {
+    color: #333;
+    text-decoration: none;
+}
+
+.icon-credits a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.form-memb-aplication {
+   grid-column: 1;    
+   margin-left: 20px;
+}
+
+.form-memb-aplication input[type="text"],
+.form-memb-aplication input[type="email"],
+.form-memb-aplication input[type="tel"],
+.form-memb-aplication textarea,
+.form-memb-aplication select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /*padding and bottom int total width*/
+}
+
+.form-memb-aplication input[type="submit"] {
+    padding: 14px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-memb-aplication input[type="submit"]:hover,
+.form-memb-aplication input[type="submit"]:focus {
+    background-color: #7edfd2;
+}
+
+.membership-cards-container {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+#card-0 {
+    background-color: #e0e0e0;
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#card-1 {
+    background-color: #cd7f32;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#card-2 {
+    background-color: #c0c0c0;
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#card-3 {
+    background-color: #ffd700;
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.membership-card button {
+    font-size: 1.3rem;
+    }
+
+.form-memb-aplication input[type="text"]:focus,
+.form-memb-aplication select focus {
+    border-color: #4FC9C9;
+    outline: none;
+}
+
+.form-memb-aplication button {
+    background-color: #4FC9C9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 03s ease;
+}
+
+.form-memb-aplication button:hover {
+    background-color: #555;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.membership-card {
+    opacity: 0;                               /*invisisble*/
+    animation: fade 1s forwards;              /*show*/
+    animation-delay: var(--animation-delay);  /*delay*/
+}
+
+.membership-card:nth-child(1) {
+    --animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(2) {
+    --animation-delay: 0.6s;
+}
+.membership-card:nth-child(3) {
+    --animation-delay: 0.9s;
+}
+.membership-card:nth-child(4) {
+    --animation-delay: 1.2s;
+}
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/*--------------Mobile responsive 890px-----------------------------------------------------*/
+@media (max-width: 800px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .logo {
+        width: 40px; 
+    }
+
+    .logo-container h1 {
+        font-size: 1.5rem; 
+    }
+
+    .logo-container p {
+        font-size: 0.9rem; 
+    }
+
+    header nav {
+        font-size: 0.9rem; 
+    }
+
+    header nav ul {
+        flex-direction: column; 
+        align-items: center;
+        padding: 0; 
+    }
+
+    header nav ul li {
+        margin-bottom: 8px; 
+    }
+
+    .view-toggle {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .view-toggle button {
+        width: 50%; 
+        margin-bottom: 5px; 
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .form-memb-aplication, .membership-cards-container {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .form-memb-aplication input[type="text"],
+    .form-memb-aplication input[type="email"],
+    .form-memb-aplication input[type="tel"],
+    .form-memb-aplication textarea,
+    .form-memb-aplication select,
+    .form-memb-aplication label {
+        font-size: 1rem;
+    }
+
+    .form-memb-aplication input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    }
+}

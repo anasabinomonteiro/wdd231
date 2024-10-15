@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 231 Project - Chamber of Commerce - Ana Lucia da Silva Monteiro</title>
     <meta name="description" content="This is the project for the WDD 231 course, focused on creating a website for the chamber of commerce.">
-    <meta name=" author" content="Ana Lucia da Silva Monteiro">
+    <meta name="author" content="Ana Lucia da Silva Monteiro">
     <meta property="og:url"             content="https://anasabinomonteiro.github.io/wdd231/chamber">
     <meta property="og:type"            content="website">
     <meta property="og:title"           content="São Paulo Chamber of Commerce">
     <meta property="og:description"     content="São Paulo Chamber of Commerce Home Page">
-    <meta property="og:image"           content="">
-    <meta property="og:image:alt"       content="">
-    <link rel="stylesheet" href="styles/chamber.css">
+    <meta property="og:image"           content="https://anasabinomonteiro.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:image:alt"       content="São Paulo">
+    <link rel="stylesheet" href="styles/join.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Javascript -->
+    <script src="scripts/join.js" defer></script>
     <!-- Favicon -->
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <!-- Javascript -->
-    <script src="scripts/chamber.js" defer></script>
 </head>
 <body>
     <header>
@@ -50,7 +50,60 @@
     </section>
 
     <main>
+        <h1>Membership Application Form</h1>
+        <div class="form-memb-aplication">
+            <form method="get" action="thankyou.html" class="fr1">
+                <fieldset>
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" title="Enter your first name" autocomplete="given-name" required>
+                </fieldset>
+                <fieldset>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" title="Enter your last name" autocomplete="family-name" required>
+                </fieldset>
+                <fieldset>
+                    <label for="organization-title">Organizational Title</label>
+                    <input type="text" id="organization-title" name="organization-title" title="Enter your title" autocomplete="organization-title" pattern="[a-zA-Z\s\-]{7,}" required>
+                </fieldset>
+                <fieldset>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" title="Enter your mail address" autocomplete="email" placeholder="example@example.com" required>
+                </fieldset>
+                <fieldset>
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" title="Enter your phone number" autocomplete="tel" required>
+                </fieldset>
+                <fieldset>
+                    <label for="organization">Organization</label>
+                    <input type="text" id="organization" name="organization" title="Enter your Organization Name" autocomplete="organization" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <label for="member-level">Select your member level</label>
+                    <select id="member-level" name="level" required>
+                        <option value="" disabled selected>Select Level</option>
+                        <option value="NP-Membership">NP Membership (no fee)</option>
+                        <option value="Bronze-Membership">Bronze Membership</option>
+                        <option value="Silver-Membership">Silver Membership</option>
+                        <option value="Gold-Membership">Gold Membership</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Business/Organization Name</legend>
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" title="Describe your Organization" placeholder="Provide details about your organization..."></textarea>
+                </fieldset>
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
 
+        <section class="membership-cards-container">
+           <!---javascript-->
+        </section>
+
+        <!---Modals-->
+        <div id="modal-container"></div>
     </main>
 
     <footer>

@@ -1,0 +1,33 @@
+[
+    {
+        "level": "Non Profit Membership",
+        "benefits": [
+            "Special events for non-profits.",
+            "Networking opportunities."
+        ]
+    },
+    {
+        "level": "Bronze Membership",
+        "benefits": [
+            "Limited adversiting opportunities.",
+            "Basic training sessions.",
+            "Access to Networking events(1 time per month)."
+        ]
+    },
+    {
+        "level": "Silver Membership",
+        "benefits": [
+            "Priority events registration.",
+            "Exclusive training events.",
+            "Access to Networking events(3 time per month)."
+        ]
+    },
+    {
+        "level": "Gold Membership",
+        "benefits": [
+            "Premium adversiting spots.",
+            "Exclusive networking events.",
+            "Complete access to all training events."
+        ]
+    }
+]

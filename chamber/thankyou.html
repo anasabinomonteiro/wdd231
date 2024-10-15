@@ -5,62 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 231 Project - Chamber of Commerce - Ana Lucia da Silva Monteiro</title>
     <meta name="description" content="This is the project for the WDD 231 course, focused on creating a website for the chamber of commerce.">
-    <meta name="author" content="Ana Lucia da Silva Monteiro">
+    <meta name=" author" content="Ana Lucia da Silva Monteiro">
     <meta property="og:url"             content="https://anasabinomonteiro.github.io/wdd231/chamber">
     <meta property="og:type"            content="website">
     <meta property="og:title"           content="São Paulo Chamber of Commerce">
     <meta property="og:description"     content="São Paulo Chamber of Commerce Home Page">
-    <meta property="og:image"           content="https://anasabinomonteiro.github.io/wdd231/chamber/images/hero.webp">
-    <meta property="og:image:alt"       content="São Paulo">
-    <link rel="stylesheet" href="styles/chamber.css">
+    <meta property="og:image"           content="">
+    <meta property="og:image:alt"       content="">
+    <link rel="stylesheet" href="styles/join.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Javascript -->
+    <script src="scripts/thankyou.js" defer></script>
     <!-- Favicon -->
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <!-- Javascript -->
-    <script src="scripts/chamber.js" defer></script>
 </head>
 <body>
     <header>
-        <!-- Logo left-->
-        <div class="header-container">
-            <div class="logo-container">
-                <!--Hamburg Button-->
-                <button id="hamburg-menu"  aria-label="Toggle navigation">&#9776;</button>
-                <img src="images/logo.png"  alt="SP Chamber Logo" class="logo">
-                <h1>São Paulo</h1> 
-                <p>Chamber of Commerce</p>
-            </div>
-         <!-- Nav right -->   
-            <nav aria-label="Main navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Discover</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
-                    <li><a href="siteplan.html">Site Plan</a></li>
-                </ul>
-            </nav>
-        </div>          
-      </header>
-
-      <!-- Hero Section -->
-    <section class="hero">
-        <img src="images/hero.webp" alt="Scalable, responsive hero image" class="hero-image">
-        <a href="join.html" class="hero-button">Join São Paulo Chamber of Commerce</a>
-    </section>
+        <header>
+            <div class="header-container">
+                <div class="logo-container">
+                    <!--Hamburg Button-->
+                    <button id="hamburg-menu"  aria-label="Toggle navigation">&#9776;</button>
+                    <img src="images/logo.png"  alt="SP Chamber Logo" class="logo">
+                    <h1>São Paulo</h1> 
+                    <p>Chamber of Commerce</p>
+                </div>
+                <nav aria-label="Main navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Discover</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="siteplan.html">Site Plan</a></li>
+                    </ul>
+                </nav>
+            </div>          
+          </header>
+    
+          <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero.webp" alt="Scalable, responsive hero image" class="hero-image">
+            <a href="join.html" class="hero-button">Join São Paulo Chamber of Commerce</a>
+        </section>        
+    </header>
 
     <main>
-        <section class="view-toggle">
-            <button id="gridView">Grid View</button>
-            <button id="listView">List View</button>
+        <section class="thankyou">
+            <h1>Thank you for your submission!</h1>
+            <p>We apreciate your interest to be part of he São Paulo Chamber of Commerce.</p>
         </section>
-
-        <section id="memberContainer"  class="grid-view">
-        </section>        
+        <section class="submitted-info">
+            <h2>Check your submitted information✅</h2>
+            <p>First Name: <span id="firstname"></span></p>
+            <p>Last Name: <span id="lastname"></span></p>
+            <p>Email: <span id="email"></span></p>
+            <p>Phone number: <span id="phone"></span></p>
+            <p>Business Name: <span id="organization"></span></p>
+            <p>Sumitted on: <span id="timestamp"></span></p>
+        </section>
     </main>
-
+    
     <footer>
         <div class="footer-container">
             <!-- Contact -->
@@ -95,7 +101,6 @@
                 <a target="_blank" href="https://icons8.com/icon/13930/linkedin">LinkedIn</a> ícone por <a target="_blank" href="https://icons8.com">Icons8</a>
             </p>
         </div>
-    </footer>
-
+    </footer>        
 </body>
 </html>
