@@ -91,14 +91,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     const weatherIcon = document.getElementById('weather-icon');
     const weatherDesc = document.getElementById('weather-desc');
     const currentTemp = document.getElementById('current-temp');
-    const currentTempForcast = document.getElementById('current-temp-forcast');
     const humidityElement = document.getElementById('humidity');
     const highElement = document.getElementById('high');
     const lowElement = document.getElementById('low');
     const sunriseElement = document.getElementById('sunrise');
     const sunsetElement = document.getElementById('sunset');
-    const forecastContainer = document.getElementById('forecast');
-
+    
     // Capitalize
     function capitalizeDescription(description) {
         return description.replace(/\b\w/g, char => char.toUpperCase());
@@ -143,13 +141,13 @@ document.addEventListener("DOMContentLoaded", async function () {
             hour: '2-digit',
             minute: '2-digit',
             hour12: true
-        });
+        }).toLowerCase();
 
         const sunsetTime = new Date(data.sys.sunset * 1000).toLocaleTimeString('en-US', { 
             hour: '2-digit',
             minute: '2-digit',
             hour12: true
-        });
+        }).toLowerCase();
 
         //Dispay timestamp AM/PM
         sunriseElement.textContent = `Sunrise: ${sunriseTime}`;
@@ -160,95 +158,53 @@ document.addEventListener("DOMContentLoaded", async function () {
      async function getWeatherForecast() {
         try {
             const response = await fetch(forecastUrl);
-            const data = await response.json(); 
-                        
-            console.log(data);
-    
-            forecastContainer.innerHTML = ''; // clean previous item if exist
-    
-            if (!data.list || data.list.length === 0) {
-                console.error("No forecast available");
-                return;
+            if(response.ok) {
+                const data = await response.json();
+                displayWeatherForecast(data);
+            } else {
+                throw new Error(await response.text());
             }
-    
-            // Forecast for 3 days (12:00 pm - noon)
-            const targetHours = 12; // 12:00 pm
-    
-            let daysCounted = 0;
-            const today = new Date();
-    
-            data.list.forEach((forecastDay) => {
-                let forecastDate = new Date(forecastDay.dt * 1000);
-    
-                if (forecastDate.getUTCHours() === targetHours && daysCounted < 3) {
-                    let daytemp = Math.round(forecastDay.main.temp);
-                    let dayDifference = forecastDate.getDate() - today.getDate();
-    
-                    let dayName;
-    
-                    if (dayDifference === 0) {
-                        dayName = 'Today';
-                    } else if (dayDifference === 1) {
-                        dayName = 'Tomorrow';
-                    } else if (dayDifference === 2) {
-                        dayName = forecastDate.toLocaleDateString('en-US', {weekday: 'long'});
-                    }
-    
-                    // Create forecast item
-                    const forecastItem = document.createElement('div');
-                    forecastItem.classList.add('forecast-item');
-                    forecastItem.innerHTML = `<strong>${dayName}:</strong> ${daytemp}°C`;
-                    forecastContainer.appendChild(forecastItem);
-    
-                    daysCounted++;
-                }
-            });        
-        } catch(error) {
-            console.error('Error fetching forecast data:', error);
-        }
+        }catch (error) {
+            console.log('Error fetching weather forecast', error);
+        }        
     }
-    
-     
 
-     
+    function displayWeatherForecast(data) {
+        const forecastContainer = document.getElementById('forecast');
+        forecastContainer.innerHTML = '';
 
-        // for (let i = 0; i < data.list.length && i < 3; i++) {
-        //     let forecastDay = data.list[i];
+        const currentDate = new Date();
+        let weekdays = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+        ];
 
-        //     // Day Temp
-        //     if (forecastDay && forecastDay.main !== undefined) {
-        //     let dayTemp = Math.round(forecastDay.main.temp); 
-        //     let forecastDate = new Date(forecastDay.dt * 1000);
+        //Iterate next 3 days
 
+        for(let i = 0; i < 3; i++) {
+            let forecastDate = new Date();
+            forecastDate.setDate(currentDate.getDate() + i); // increment days
+
+            let forecastDay = weekdays[forecastDate.getDay()]; // get day of week
+            let forecastDetails = data.list[i];
+
+            let roundedTemp = Math.round(forecastDetails.main.temp);
+
+            const forecastParagraph = document.createElement('p');
+            forecastParagraph.textContent = `${forecastDay}: ${roundedTemp}°C`;
             
-        //     let today = new Date();
-        //     let dayDifference = forecastDate.getDate() - today.getDate(); //difference in days
-
-        //     let dayName;
-            
-        //     if (dayDifference === 0) {
-        //         dayName = 'Today';
-        //     } else if (dayDifference === 1) {
-        //         dayName = forecastDate.toLocaleDateString('en-US', {weekday: 'long'});
-        //     } else if (dayDifference === 2) {
-        //         dayName = forecastDate.toLocaleDateString('en-US', {weekday: 'long'});
-        //     }
-            
-    //         // Create forecast item
-    //         const forecastItem = document.createElement('div');
-    //         forecastItem.classList.add('forecast-item');
-    //         forecastItem.innerHTML = `<strong>${dayName}:</strong> ${dayTemp}°C`;
-    //         forecastContainer.appendChild(forecastItem);
-    //         } else {
-    //             console.error(`Missing temperature data for day ${i + 1}`);
-    //         }
-    //     }        
-      
-
+            //Append forecast day to forecast memberContainer
+            forecastContainer.appendChild(forecastParagraph);            
+        }       
+    }      
     // Call functions
     getWeatherData();
     getWeatherForecast();
-
 
     async function fetchMembers() {
         try {
