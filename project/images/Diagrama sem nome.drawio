@@ -1,9 +1,50 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="Página-1" id="RbrevgVYu7criXNc0PtK">
-    <mxGraphModel>
+    <mxGraphModel dx="1877" dy="565" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="KI8SojKLL8dTfhrD_3tG-18" value="Young Women Activity&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;Home&amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp;Activity Ideas&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt; &amp;nbsp; &amp;nbsp;Trivia &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Activity&amp;nbsp;Form" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontColor=#596780;fontSize=12;verticalAlign=top;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="90" y="4.2" width="737" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KI8SojKLL8dTfhrD_3tG-12" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.hatena;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry width="86.2" height="44.2" as="geometry" />
+        </mxCell>
+        <mxCell id="KI8SojKLL8dTfhrD_3tG-13" value="Our&amp;nbsp; Purpose" style="fillColor=none;strokeColor=none;html=1;fontSize=11;fontStyle=0;align=left;fontColor=#596780;fontStyle=1;fontSize=11;verticalAlign=top;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="30" y="270" width="380" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KI8SojKLL8dTfhrD_3tG-14" value="Our purpose is Lorem Ipsum&lt;div&gt;&lt;p class=&quot;MsoNormal&quot;&gt;Lorem ipsum dolor sit amet. Rem debitis unde vel&lt;br&gt;consequatur sint ut voluptate quod ut nobis molestiae. Et labore nobis ea&amp;nbsp;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;commodi omnis et rerum consequatur sed reiciendis corrupti eos enim soluta.&lt;/p&gt;&lt;/div&gt;" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontColor=#596780;fontSize=12;verticalAlign=top;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="720" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="KI8SojKLL8dTfhrD_3tG-15" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.link;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="20" y="910" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="KI8SojKLL8dTfhrD_3tG-16" value="" style="shape=message;html=1;html=1;outlineConnect=0;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="730" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="KI8SojKLL8dTfhrD_3tG-17" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.acute_triangle;dx=0.5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="130" width="730" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KI8SojKLL8dTfhrD_3tG-20" value="Purpose of Young Women Organization" style="fillColor=none;strokeColor=none;html=1;fontSize=11;fontStyle=0;align=left;fontColor=#596780;fontStyle=1;fontSize=11;verticalAlign=top;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="40" y="530" width="380" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KI8SojKLL8dTfhrD_3tG-21" value="Our purpose is Lorem Ipsum&lt;div&gt;&lt;p class=&quot;MsoNormal&quot;&gt;Lorem ipsum dolor sit amet. Rem debitis unde vel&lt;br&gt;consequatur sint ut voluptate quod ut nobis molestiae. Et labore nobis ea&amp;nbsp;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;commodi omnis et rerum consequatur sed reiciendis corrupti eos enim soluta.&lt;/p&gt;&lt;/div&gt;" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontColor=#596780;fontSize=12;verticalAlign=top;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="50" y="570" width="720" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="KI8SojKLL8dTfhrD_3tG-22" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.link;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="20" y="860" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="KI8SojKLL8dTfhrD_3tG-27" value="https://www.churchofjesuschrist.org/" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontColor=#596780;fontSize=12;verticalAlign=top;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="60" y="860" width="333.5" height="20" as="geometry" />
+        </mxCell>
+        <UserObject label="https://www.churchofjesuschrist.org/study/manual/general-handbook?lang=por" link="https://www.churchofjesuschrist.org/study/manual/general-handbook?lang=por" id="KI8SojKLL8dTfhrD_3tG-28">
+          <mxCell style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontColor=#596780;fontSize=12;verticalAlign=top;fontFamily=Helvetica;" vertex="1" parent="1">
+            <mxGeometry x="50" y="910" width="440" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="KI8SojKLL8dTfhrD_3tG-30" value="&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;span lang=&quot;PT-BR&quot;&gt;WDD231&amp;nbsp; Class Project&lt;/span&gt;&lt;/b&gt;&lt;div&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span lang=&quot;PT-BR&quot;&gt;Ana Lucia da Silva Monteiro&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;©&amp;nbsp;2024 Young Women&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Energy&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Last Modification: XX/XX/2024 hh:mm:ss&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=center;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontColor=#596780;fontSize=12;verticalAlign=top;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry y="1010" width="830" height="135" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
