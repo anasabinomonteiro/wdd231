@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 Project - Individual Project - Ana Lucia da Silva Monteiro</title>
+    <meta name="description" content="This is the project for the WDD 231 course, focused on creating a website to apply the concepts learned in WDD 231 course.">
+    <meta name=" author" content="Ana Lucia da Silva Monteiro">
+    <meta property="og:url"             content="https://anasabinomonteiro.github.io/wdd231/project">
+    <meta property="og:type"            content="website">
+    <meta property="og:title"           content="Young Women Energy - Activities That Inspire">
+    <meta property="og:description"     content="Young Women Energy - Activities That Inspire Siteplan">
+    <meta property="og:image"           content="">
+    <meta property="og:image:alt"       content="">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- Javascript -->
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <!-- Logo left-->
+        <div class="header-container">
+            <div class="logo-container">
+                <!--Hamburg Button-->
+                <button id="hamburg-menu"  aria-label="Toggle navigation">&#9776;</button>
+                <img src="images/logo.png"  alt="Youth Activity Logo" class="logo">
+                <h1>Young Women Energy</h1> 
+                <p>Activities That Inspire</p>
+            </div>
+         <!-- Nav right -->   
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="activity_ideas.html">Activity Ideas</a></li>
+                    <li><a href="young_women_trivia.html">Young Women Trivia</a></li>
+                    <li><a href="activity_submission.html">Activity Submission Form</a></li>
+                    <li><a href="siteplan.html">Site Plan</a></li>
+                </ul>
+            </nav>
+        </div>          
+      </header>
+
+      <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/youth_activity_australia.jpeg" alt="Scalable, responsive hero image" class="hero-image">
+        <a href="activity_submission.html" class="hero-button">Activity Form</a>
+    </section>
+
+    <main>
+        <!--Site Name -->
+        <h1>Site Name</h1>
+        <p>Young Women Energy - Activities That Inspire</p>
+        <h3>Audience</h3>  
+        <p>Young Women leaders</p>    
+
+        <!--Site Purpose -->
+        <h2>Site Purpose</h2>
+        <p>The site will be a platform dedicated to supporting Young Women leaders (young women ages 12 to 18) in Brazil, offering activity ideas, helpful resources, and guidance based on the General Church Handbook. The goal is to create a centralized and accessible space where leaders can find inspiration, exchange experiences and strengthen their work with Young Women, as well as facilitate communication and planning of activities relevant to the spiritual and social development of Young Women.</p>
+        
+        <!--Scenarios-->
+         <h1>Scenarios</h1>
+         <p>What spiritual and recreational activities can I plan for Young Women that are engaging and aligned with the General Handbook?</p>
+         <p>Our website content will offer tried-and-tested activity ideas, planning guidelines, and additional resources.</p>
+         <p>How can I help Young Women understand and practice Youth Strength guidelines through activities?</p>
+         <p>Many leaders look for practical ways to guide Young Women in applying the program. Our website offers suggestions for activities related to the program.</p>
+         
+         <!--Color Schema-->
+         Palette URL: <a href="https://coolors.co/272827-2e5eaa-dfdce5-593959" target="_blank">https://coolors.co/272827-2e5eaa-dfdce5-593959</a>
+        
+         <table class="colors">
+            <tr><th>Primary</th><th>Secondary</th><th>Background Color:</th><th>Text Color:</th></tr>
+            <tr><td class="primary">[#2E5EAA]</td><td class="secondary">[#593959]</td><td class="background">[#DFDCE5]</td><td class="text">[#272827]</td></tr>
+        </table>
+
+        <!--Typography-->
+        <h4>Font: [Roboto normal 400]</h4>
+        <h2>Wireframes</h2>
+        <p>Wireframes of the site</p>
+        <h3>Desktop</h3>
+        <img src="images/chamber-desktop-wireframe.webp" alt="desktop wireframe">
+        <h3>Mobile</h3>
+        <img src="images/chamber-mobile-wireframe.webp" alt="mobile wireframe">
+     </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Contact -->
+            <div class="footer-column contact-info">
+                <h3>Young Women Energy</h3>
+                <p>Activities That Inspire</p>
+            </div>
+    
+            <!-- Social Media Icons -->
+            <div class="footer-column social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube Icon"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter Icon"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn Icon"></a>
+            </div>
+    
+            <!-- Project Information -->
+            <div class="footer-column dev-info">
+                <h3>WDD231 Class Project</h3>
+                <p>Ana Lucia da Silva Monteiro</p>
+                <p>&copy; <span id="currentYear"></span>Young Women Energy</p>
+                <p>Last Modification: <span id="lastModifiedDate"></span></p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
