@@ -1,0 +1,200 @@
+/* Generaç*/
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 20px 0 20px;
+    padding: 0;
+    background-color: white;
+    color: #272827;
+}
+
+header {
+    background-color: #2E5EAA;
+    color: white;
+    padding: 1rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hamburg button */
+#hamburg-menu {
+    display: none; /* hide large screen */
+    background-color: #2E5EAA;
+    color: #272827;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#hamburg-menu::before {
+    content: "☰"; 
+}
+
+#hamburg-menu.open::before {
+    content: "❎"; 
+}
+
+table.colors {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table.colors th, table.colors td {
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #978989;
+    font-family: 'Roboto', sans-serif;
+}
+
+table.colors th {
+    background-color: #050404; 
+    color: #f8ebeb; 
+    font-weight: bold;
+}
+
+.primary {
+    background-color: #2E5EAA;
+    color: #fff;
+}
+
+.secondary {
+    background-color: #593959;
+    color: #fff;
+}
+
+.background {
+    background-color: #DFDCE5;
+    color: #333;
+}
+
+.text {
+    background-color: #272827;
+    color: #fff;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;    
+    height: auto;
+    }
+
+.hero-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #593959;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #555;
+}
+
+/* Footer general */
+footer {
+    background-color:#2E5EAA;
+    color: white;
+    padding: 1rem 0;
+    border-top: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-column {
+    text-align: center;
+}
+
+.social-icons img {
+    width: 50px;
+    margin: 0 0.5rem;
+}
+
+
+/*Mobile view*/
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    #hamburg-menu {
+        display: block;
+        position: absolute; 
+        top: 20px; 
+        right: 20px; 
+        z-index: 10; 
+    }
+
+    .hero-button {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    table.colors th, table.colors td {
+        padding: 5px;
+      }   
+}
