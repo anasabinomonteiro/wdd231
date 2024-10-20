@@ -12,17 +12,18 @@
     <meta property="og:description"     content="São Paulo Chamber of Commerce Home Page">
     <meta property="og:image"           content="https://anasabinomonteiro.github.io/wdd231/chamber/images/hero.webp">
     <meta property="og:image:alt"       content="São Paulo">
-    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/chamber.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Javascript -->
-    <script src="scripts/join_discover.js" defer></script>
     <!-- Favicon -->
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- Javascript -->
+    <script src="scripts/join_discover.js" defer></script>
 </head>
 <body>
     <header>
+        <!-- Logo left-->
         <div class="header-container">
             <div class="logo-container">
                 <!--Hamburg Button-->
@@ -31,6 +32,7 @@
                 <h1>São Paulo</h1> 
                 <p>Chamber of Commerce</p>
             </div>
+         <!-- Nav right -->   
             <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -42,69 +44,70 @@
             </nav>
         </div>          
       </header>
-
+      
       <!-- Hero Section -->
     <section class="hero">
         <img src="images/hero.webp" alt="Scalable, responsive hero image" class="hero-image">
         <a href="join.html" class="hero-button">Join São Paulo Chamber of Commerce</a>
     </section>
 
-    <main>
-        <h1>Membership Application Form</h1>
-        <div class="form-memb-aplication">
-            <form method="get" action="thankyou.html" class="fr1">
-                <fieldset>
-                    <label for="firstname">First Name</label>
-                    <input type="text" id="firstname" name="firstname" title="Enter your first name" autocomplete="given-name" required>
-                </fieldset>
-                <fieldset>
-                    <label for="lastname">Last Name</label>
-                    <input type="text" id="lastname" name="lastname" title="Enter your last name" autocomplete="family-name" required>
-                </fieldset>
-                <fieldset>
-                    <label for="organization-title">Organizational Title</label>
-                    <input type="text" id="organization-title" name="organization-title" title="Enter your title" autocomplete="organization-title" pattern="[a-zA-Z\s\-]{7,}" required>
-                </fieldset>
-                <fieldset>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" title="Enter your mail address" autocomplete="email" placeholder="example@example.com" required>
-                </fieldset>
-                <fieldset>
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" title="Enter your phone number" autocomplete="tel" required>
-                </fieldset>
-                <fieldset>
-                    <label for="organization">Organization</label>
-                    <input type="text" id="organization" name="organization" title="Enter your Organization Name" autocomplete="organization" required>
-                </fieldset>
-                <fieldset>
-                    <legend>Membership Level</legend>
-                    <label for="member-level">Select your member level</label>
-                    <select id="member-level" name="level" required>
-                        <option value="" disabled selected>Select Level</option>
-                        <option value="NP-Membership">NP Membership (no fee)</option>
-                        <option value="Bronze-Membership">Bronze Membership</option>
-                        <option value="Silver-Membership">Silver Membership</option>
-                        <option value="Gold-Membership">Gold Membership</option>
-                    </select>
-                </fieldset>
-                <fieldset>
-                    <legend>Business/Organization Name</legend>
-                    <label for="description">Description</label>
-                    <textarea id="description" name="description" title="Describe your Organization" placeholder="Provide details about your organization..."></textarea>
-                </fieldset>
-                <input type="hidden" id="timestamp" name="timestamp" value="">
-                <input type="submit" value="Submit">
-            </form>
+    <main class="discover">
+        <div class="grid-discover">
+            <!---Sidebar -->
+            <aside class="sidebar">
+                <!---First block -->
+                <div class="sidebar-section">
+                    <h2>Italo-Brazilian Chamber of Commerce (Italcam)</h2>
+                    <p>There are events such as the Innovation Symposium in the Health Area, a webinar on competitive ethics and damage repair, and ITALY MEETS BRAZIL: The textile industry between innovation and sustainability</p>
+                </div>
+                 <!---Second block -->
+                 <div class="sidebar-section">
+                    <h2>Exclusive Event</h2>
+                    <img src="images/event_chamber.jpeg"  alt="Chamber Event"  class="sidebar-img">
+                    <p>CAE - Economic Affairs Committee</p>
+                 </div>
+                  <!---Calendar -->
+                  <div class="sidebar-section">
+                    <h2>Calendar</h2>
+                    <div class="calendar">
+                        <p>October 19, 2024</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+                                </tr>
+                                <tr>
+                                    <td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+            </aside>
+            <!--- Img Gallery -->
+            <section class="gallery">
+                <h2>Chamber Gallery</h2>
+                <div class="image-container">
+                    <img class="lazy" src="images/spcity_image.png" alt="Chamber image">
+                    <img class="lazy" src="images/spcity_image1.webp" alt="Chamber image">
+                    <img class="lazy" src="images/spcity_image2.webp" alt="Chamber image">
+                    <img class="lazy" src="images/spcity_image3.webp" alt="Chamber image">
+                    <img class="lazy" src="images/spcity_image4.png" alt="Chamber image">
+                    <img class="lazy" src="images/spcity_image5.jpeg" alt="Chamber image">
+                </div>
+            </section>
         </div>
-
-        <section class="membership-cards-container">
-           <!---javascript
-           -->
-        </section>
-
-        <!---Modals-->
-        <div id="modal-container"></div>
     </main>
 
     <footer>

@@ -23,19 +23,39 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     document.addEventListener("DOMContentLoaded", function (){
         //localStorage
-        const firstName = localStorage.getItem('firstname');
-        const lastName = localStorage.getItem('lastname');
+        const firstname = localStorage.getItem('firstname');
+        const lastname = localStorage.getItem('lastname');
         const email = localStorage.getItem('email');
         const phone = localStorage.getItem('phone');
         const organization = localStorage.getItem('organization');
         const timestamp = localStorage.getItem('timestamp');
 
         //Show data in the page
-        document.getElementById('firstname').textContent = firstName;
-        document.getElementById('lastname').textContent = lastName;
-        document.getElementById('email').textContent = email;
-        document.getElementById('phone').textContent = phone;
-        document.getElementById('organization').textContent = organization;
-        document.getElementById('timestamp').textContent = timestamp;        
+        if (document.getElementById('firstname')) {
+            document.getElementById('firstname').textContent = firstname ? firstname : 'N/A';
+        }
+        if (document.getElementById('lastname')) {
+            document.getElementById('lastname').textContent = lastname ? lastname : 'N/A';
+        }
+        if (document.getElementById('email')) {
+            document.getElementById('email').textContent = email ? email : 'N/A';
+        }
+        if (document.getElementById('phone')) {
+            document.getElementById('phone').textContent = phone ? phone : 'N/A';
+        }
+        if (document.getElementById('organization')) {
+            document.getElementById('organization').textContent = organization ? organization : 'N/A';
+        }
+        if (document.getElementById('timestamp')) {
+            document.getElementById('timestamp').textContent = timestamp ? timestamp : 'N/A';
+        }   
+
+        //Clean afer display        
+        localStorage.removeItem('firstname');
+        localStorage.removeItem('lastname');
+        localStorage.removeItem('email');
+        localStorage.removeItem('phone');
+        localStorage.removeItem('organization');
+        localStorage.removeItem('timestamp');
     });    
 })
