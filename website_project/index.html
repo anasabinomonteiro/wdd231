@@ -3,9 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 231 Project - Individual Project - Ana Lucia da Silva Monteiro</title>
+    <meta name="description" content="This is the project for the WDD 231 course, focused on creating a website to apply the concepts learned in WDD 231 course.">
+    <meta name=" author" content="Ana Lucia da Silva Monteiro">
+    <meta property="og:url"             content="https://anasabinomonteiro.github.io/wdd231/project">
+    <meta property="og:type"            content="website">
+    <meta property="og:title"           content="Young Women Energy - Activities That Inspire">
+    <meta property="og:description"     content="Young Women Energy - Activities That Inspire Siteplan">
+    <meta property="og:image"           content="">
+    <meta property="og:image:alt"       content="">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- Javascript -->
+    <script src="scripts/project.js" defer></script>
 </head>
 <body>
+    <header>
+        <!-- Logo left-->
+        <div class="header-container">
+            <div class="logo-container">
+                <!--Hamburg Button-->
+                <button id="hamburg-menu"  aria-label="Toggle navigation">&#9776;</button>
+                <img src="images/logo.png"  alt="Youth Activity Logo" class="logo">
+                <h1>Young Women Energy</h1> 
+            </div>
+         <!-- Nav right -->   
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="activity_ideas.html">Activity Ideas</a></li>
+                    <li><a href="young_women_trivia.html">Trivia</a></li>
+                    <li><a href="activity_submission.html">Activity Form</a></li>
+                    <li><a href="siteplan.html">Site Plan</a></li>
+                </ul>
+            </nav>
+        </div>          
+      </header>
+
+      <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/youth_activity_australia.jpeg" alt="Scalable, responsive hero image" class="hero-image">
+        <a href="activity_submission.html" class="hero-button">Activity Form</a>
+    </section>
+
+    <main>
+        <div class="site-purpose">
+            <h1>Our Purpose</h1>
+            <p>Welcome to our website, a space dedicated to Young Women leaders in Brazil. As part of my work with the young women in my community, I realized the importance of having a centralized place where leaders can find resources, share ideas for activities, and seek guidance on frequently asked questions regarding the General Handbook and other guides. </p>
+            <p>This website was created to be a practical and accessible tool to support your work with young women, to facilitate access to useful materials, and to encourage the sharing of experiences and creative solutions. </p>
+            <p>Here you will find suggestions for activities, references for materials, and a space for interaction and mutual growth, all aimed at strengthening the service of young women leaders in our country.</p>
+        </div>
+
+        <div class="yw-purpose">
+            <h1>Young Women Purpose</h1>
+            <p>The purpose of the Young Women organization is to guide and nurture young women as they become covenant women of God and to help each young woman be worthy to make and keep sacred covenants and
+                receive the ordinances and blessings of the temple.</p>
+            <p>source: <a href="https://www.churchofjesuschrist.org/callings/young-women-organization/work-and-purpose?lang=eng" target="_blank">Work and Purpose of Young Women</a></p>
+        </div>        
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Contact -->
+             <!-- Project Information -->
+            <div class="footer-column dev-info">
+                <h3>WDD231 Class Project</h3>
+                <p>Ana Lucia da Silva Monteiro</p>
+                <p>&copy; <span id="currentYear"></span>  Young Women Energy</p>
+                <p>Last Modification: <span id="lastModifiedDate"></span></p>
+            </div>
+                
+            <!-- Social Media Icons -->
+            <div class="footer-column social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube Icon"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter Icon"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn Icon"></a>
+            </div>           
+            
+        </div>
+    </footer>
     
 </body>
 </html>
