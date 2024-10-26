@@ -50,11 +50,25 @@
         <a href="activity_submission.html" class="hero-button">Activity Form</a>
     </section>
 
-    <main class="main-trivia">
-        <h2>Trivia Quiz</h2>
-        <button id="loadQuiz">Start Quiz</button>
-        <div id="quizContainer"></div>
-         <!-- Javascript API - Open Trivia DB -->
+    <main>
+        <h1>Thank You to share your activity with Us!</h1>
+        <div id="formDataDisplay"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const formData = JSON.parse(localStorage.getItem('formData'));
+                if (formData) {
+                    document.getElementById('formDataDisplay').innerHTML= `
+                    <p><strong>Ward Name:</strong> ${formData.ward}</p>
+                    <p><strong>Stake Name:</strong> ${formData.stake}</p>
+                    <p><strong>Activity Title:</strong> ${formData.activityTitle}</p>
+                    <p><strong>Your email:</strong> ${formData.email}</p>
+                    <p><strong>Activity Description:</strong> ${formData.description}</p>
+                    <p><strong>Submitted on:</strong> ${formData.timestamp}</p>
+                    `;
+                    localStorage.removeItem('formData'); //Clean after display
+                }
+            });
+        </script>         
     </main>
 
     <footer>

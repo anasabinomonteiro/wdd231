@@ -51,7 +51,40 @@
     </section>
 
     <main>
-         
+        <h1>Activity Description Form</h1>
+        <div class="form-activity">
+            <form method="get" action="thankyou.html" class="fr1" onsubmit="return FormData()">            
+                <fieldset>
+                    <label for="ward">Ward Name</label>
+                    <input type="text" id="ward" name="ward" title="Enter your ward name" autocomplete="ward-name" required>
+                </fieldset>
+                <fieldset>
+                    <label for="stake">Stake Name</label>
+                    <input type="text" id="stake" name="stake" title="Enter your stake name" autocomplete="stake-name" required>
+                </fieldset>
+                <fieldset>
+                    <label for="activity">Activity Title</label>
+                    <input type="text" id="activity-title" name="activity-title" title="Enter your activity title" autocomplete="activity-title"  required>
+                </fieldset>
+                <fieldset>
+                    <label for="email">Your email</label>
+                    <input type="email" id="email" name="email" title="Enter your mail address" autocomplete="email" placeholder="example@example.com" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Brief description activity</legend>
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" title="Describe your Activity" placeholder="Share details about your activity"></textarea>
+                </fieldset>
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+                <input type="submit" value="Submit">
+                <fieldset>
+                    <legend>Would you like to share photos of your activity?</legend>
+                    <label><input type="radio" name="radio" value="yes" /> Yes</label>
+                    <label><input type="radio" name="radio" value="no" /> No</label>
+                    <p>Share your photos with us via email: <a href="ywactivities@photos.com">ywactivities@photos.com</a></p>
+                  </fieldset>
+            </form>
+        </div> 
     </main>
 
     <footer>

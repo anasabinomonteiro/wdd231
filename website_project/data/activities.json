@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Small mission training center",
+        "description": "Small meetings using the lessons from the missionary manual in 4 weeks. At the end, the young people do a day of sharing with the missionaries, including taking part in the meals and gospel teaching.",
+        "category": "spiritual",
+        "image": "images/missionary_mtc.webp"
+    },
+    {
+        "title": "Happy cleaning day",
+        "description": "The girls get in touch with the sisters who live on Relief Society alone and offer them a day of organizing and cleaning.",
+        "category": "service",
+        "image": "images/happy_clean_day.webp"
+    },
+    {
+        "title": "Walk in the park",
+        "description": "Enjoy the outdoors with a group walk and picnic, with a message about health care",
+        "category": "physical",
+        "image": "images/walk_in_the_park.webp"
+    },
+    {
+        "title": "Princess day",
+        "description": "An afternoon tea with snacks and drinks, where they will make a time capsule with their wishes for the future and learn about their divine potential.",
+        "category": "social",
+        "image": "images/princess_day.webp"
+    }
+]
