@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     if (lastModifiedDateElement) {
         lastModifiedDateElement.textContent = lastModifiedDate;
     }
+    
     // hamburg button
     const hamburgMenu = document.getElementById('hamburg-menu');
     const navMenu = document.querySelector('nav ul');
@@ -24,19 +25,19 @@ document.addEventListener("DOMContentLoaded", async function() {
     const activityList = document.getElementById("activity-list");
     const filter = document.getElementById("activity-filter");
 
-    //Json data
+    // Json data
     async function fetchActivities() {
         try {
             const response = await fetch('data/activities.json');
             const activities = await response.json();
             displayActivities(activities);
-            filterActivities(activities); //filter configuration
-            console
+            filterActivities(activities); // filter configuration
         } catch (error) {
             console.error("Error for search activities", error);
         }        
     }
-    //Display activities
+
+    // Display activities
     function displayActivities(activities) {
         activityList.innerHTML = ""; // clean the filter
         activities.forEach(activity => {
@@ -51,46 +52,48 @@ document.addEventListener("DOMContentLoaded", async function() {
             activityList.appendChild(activityCard);
         });
     }
-    //Filter activities
+
+    // Filter activities
     function filterActivities(activities) {
         filter.addEventListener("change", () => {
             const selectedCategory = filter.value;
             const filteredActivities = selectedCategory === "all"
             ? activities
-            :activities.filter(activity => activity.category === selectedCategory);
+            : activities.filter(activity => activity.category === selectedCategory);
             displayActivities(filteredActivities);
         });
     }
+
     fetchActivities(); // Call function to Display activities
 
     //************Trivia Page******************/
     document.getElementById('loadQuiz').addEventListener('click', loadQuiz);
 
     async function loadQuiz() {
-        try{
+        try {
             const response = await fetch('https://opentdb.com/api.php?amount=10&category=23');
             const data = await response.json();
-            console.log('json ok:', data)
+            console.log('json ok:', data);
             displayQuestions(data.results);
-        }catch (error) {
-            console.error("Eror fetching the quiz data:", error);
+        } catch (error) {
+            console.error("Error fetching the quiz data:", error);
         }        
     }
 
     function displayQuestions(questions) {
         const quizContainer = document.getElementById('quizContainer');
-        quizContainer.innerHTML='';
+        quizContainer.innerHTML = '';
 
         questions.forEach((question, index) => {
             const questionElement = document.createElement('div');
             questionElement.classList.add('question');
 
-            //question
+            // Question
             const questionText = document.createElement('p');
             questionText.innerHTML = `Q${index + 1}: ${question.question}`;
             questionElement.appendChild(questionText);
 
-            //answer
+            // Answer
             const answers = [...question.incorrect_answers, question.correct_answer].sort(() => 0.5 - Math.random());
 
             answers.forEach(answer => {
@@ -98,14 +101,14 @@ document.addEventListener("DOMContentLoaded", async function() {
                 answerButton.textContent = answer;
                 answerButton.classList.add('answer');
 
-                //add event to verify the answer
+                // Add event to verify the answer
                 answerButton.addEventListener('click', () => {
                     if (answer === question.correct_answer) {
                         answerButton.classList.add('correct-answer');
                         setTimeout(() => {
                             answerButton.classList.remove('correct-answer');
-                        }, 1000); //animation duration (1000ms = 1s)
-                        } else {
+                        }, 1000); // Animation duration (1000ms = 1s)
+                    } else {
                         answerButton.style.backgroundColor = 'lightcoral';
                     }
                 });
@@ -114,18 +117,21 @@ document.addEventListener("DOMContentLoaded", async function() {
             quizContainer.appendChild(questionElement);
         });
     }
-    //************Form Page******************/
-    window.FormData = function() {
-        const formData = {
-            ward: document.getElementById('ward').value,
-            stake: document.getElementById('stake').value,
-            activityTitle: document.getElementById('activity-title').value,
-            email: document.getElementById('email').value,
-            description: document.getElementById('description').value,
-            timestamp: new Date().toLocaleString(),          
-        };
-        console.log(formData);
-        localStorage.setItem('formData', JSON.stringify(formData));
-        return true;
-    }
-})
+
+    // Activity Submit
+    const form = document.getElementById('form-submit');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        data.timestamp = new Date().toLocaleString(); // Adiciona a data/hora atual
+        console.log('Dados a serem armazenados:', JSON.stringify(data));
+
+        localStorage.setItem('formData', JSON.stringify(data)); // Armazena os dados no localStorage
+
+        window.location.href = "thankyou.html"; // Redireciona para a página de agradecimento
+    });
+});

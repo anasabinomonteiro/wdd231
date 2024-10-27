@@ -56,7 +56,7 @@ nav ul li a {
 #hamburg-menu {
     display: none; /* hide large screen */
     background-color: #2E5EAA;
-    color: #272827;
+    color: #fff3f0;
     border: none;
     font-size: 2em;
     cursor: pointer;
@@ -221,9 +221,10 @@ nav ul li a {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #a77da7;
+    background-color: #dbb6db;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
 .form-activity h1 {
@@ -254,7 +255,8 @@ nav ul li a {
     border-radius: 5px;
     font-size: 1rem;
     margin-top: 5px;
-    background-color: #a77da7;
+    background-color: #f3dbf3;
+    
 }
 
 .form-activity textarea{
@@ -284,7 +286,7 @@ nav ul li a {
 }
 
 .form-activity input[type="submit"]:hover {
-    background-color: #7A517A;
+    background-color: #2e0d2e;
 }
 
 .form-activity input[type="radio"] {
@@ -297,6 +299,28 @@ nav ul li a {
     color: #555;
     text-align: center;
 }
+
+/* Thank You */
+#thankh1 h1 {
+    font-size: 2rem ;
+    margin-bottom: 1rem;
+    color: white;
+    }
+
+#formDataDisplay {
+    border-top: 2px solid #2e0d2e;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    background-color: #e0d8e0;
+
+}  
+
+#formDataDisplay p {
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
 
 /* Footer general */
 footer {

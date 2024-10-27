@@ -28,7 +28,7 @@
             <div class="logo-container">
                 <!--Hamburg Button-->
                 <button id="hamburg-menu"  aria-label="Toggle navigation">&#9776;</button>
-                <img src="images/logo.png"  alt="Youth Activity Logo" class="logo">
+                <img src="images/logo.png"  alt="Youth Activity Logo" class="logo" >
                 <h1>Young Women Energy</h1> 
             </div>
          <!-- Nav right -->   
@@ -51,24 +51,8 @@
     </section>
 
     <main>
-        <h1>Thank You to share your activity with Us!</h1>
-        <div id="formDataDisplay"></div>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const formData = JSON.parse(localStorage.getItem('formData'));
-                if (formData) {
-                    document.getElementById('formDataDisplay').innerHTML= `
-                    <p><strong>Ward Name:</strong> ${formData.ward}</p>
-                    <p><strong>Stake Name:</strong> ${formData.stake}</p>
-                    <p><strong>Activity Title:</strong> ${formData.activityTitle}</p>
-                    <p><strong>Your email:</strong> ${formData.email}</p>
-                    <p><strong>Activity Description:</strong> ${formData.description}</p>
-                    <p><strong>Submitted on:</strong> ${formData.timestamp}</p>
-                    `;
-                    localStorage.removeItem('formData'); //Clean after display
-                }
-            });
-        </script>         
+        <h1 id="thankh1">Thank You to share your activity with Us!</h1>
+        <div id="formDataDisplay"></div>       
     </main>
 
     <footer>
@@ -91,6 +75,39 @@
             
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const formData = {
+                ward: params.get('ward'),
+                stake: params.get('stake'),
+                'activity-title': params.get('activity-title'),
+                email: params.get('email'),
+                description: params.get('description'),
+                timestamp: params.get('timestamp') || new Date().toLocaleString(), 
+                radio: params.get('radio')
+            };
+
+            // Form data null(Y/N)
+            if (formData) {
+                document.getElementById('formDataDisplay').innerHTML = `
+                    <p><strong>Ward Name:</strong> ${formData.ward}</p>
+                    <p><strong>Stake Name:</strong> ${formData.stake}</p>
+                    <p><strong>Activity Title:</strong> ${formData['activity-title']}</p>
+                    <p><strong>Your Email:</strong> ${formData.email}</p>
+                    <p><strong>Activity Description:</strong> ${formData.description}</p>
+                    <p><strong>Submitted on:</strong> ${formData.timestamp}</p>
+                    <p><strong>Photos shared:</strong> ${formData.radio}</p>
+                `;
+            } else {
+                console.error('No form data found'); // Mensagem de erro
+                document.getElementById('formDataDisplay').textContent = 'No data found'; // Mensagem na página
+            }
+        });
+    </script>
+
+
     
 </body>
 </html>
